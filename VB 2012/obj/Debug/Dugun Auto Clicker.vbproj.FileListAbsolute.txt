@@ -1,0 +1,11 @@
+c:\users\admin\documents\visual studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\obj\Debug\Dugun_Auto_Clicker.Form1.resources
+c:\users\admin\documents\visual studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\obj\Debug\Dugun_Auto_Clicker.Resources.resources
+c:\users\admin\documents\visual studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\obj\Debug\Dugun Auto Clicker.vbproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\obj\Debug\Dugun_Auto_Clicker.Form2.resources
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\bin\Debug\Dugun Auto Clicker 6.exe.config
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\bin\Debug\Dugun Auto Clicker 6.exe
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\bin\Debug\Dugun Auto Clicker 6.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\bin\Debug\Dugun Auto Clicker 6.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\obj\Debug\Dugun Auto Clicker 6.exe
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\obj\Debug\Dugun Auto Clicker 6.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\Dugun Auto Clicker\Dugun Auto Clicker\obj\Debug\Dugun Auto Clicker 6.pdb
