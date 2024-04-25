@@ -1,8 +1,17 @@
 #include <iostream>
+#include "DML/headers/Timer.h"
 
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
+    Timer timer;
+    timer.setLoops(5);
+    timer.setInterval(500);
+    timer.start();
+
+    while(timer.enabled())
+    {
+        std::cout << "tic" << "\n";
+    }
 
     return 0;
 }
