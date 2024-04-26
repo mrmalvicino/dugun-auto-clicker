@@ -1,6 +1,6 @@
 #pragma once
-#include "Position.h"
-#include "Click.h"
+#include "CursorPosition.h"
+#include "CursorEvent.h"
 
 class MouseAction
 {
@@ -12,19 +12,19 @@ class MouseAction
 
     void setTime(int time);
 
-    Position getPosition();
+    CursorPosition getCursorPosition();
 
-    void setPosition(Position position);
+    void setCursorPosition(CursorPosition cursorposition);
 
-    Click getClick();
+    CursorEvent getCursorEvent();
 
-    void setClick(Click click);
+    void setCursorEvent(CursorEvent cursorevent);
 
     private:
 
     int _time;
 
-    Position _position;
+    CursorPosition _cursorposition;
 
-    Click _click;
+    CursorEvent _cursorevent;
 };

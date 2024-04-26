@@ -1,10 +1,10 @@
 #pragma once
 
-class Position
+class CursorPosition
 {
     public:
 
-    Position();
+    CursorPosition();
 
     int getX();
 

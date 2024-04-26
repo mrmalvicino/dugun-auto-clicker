@@ -10,7 +10,7 @@ int main()
 
     while(timer.enabled())
     {
-        std::cout << "tic" << "\n";
+        std::cout << "click" << "\n";
     }
 
     return 0;

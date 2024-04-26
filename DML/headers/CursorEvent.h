@@ -1,11 +1,11 @@
 #pragma once
 #include <string>
 
-class Click
+class CursorEvent
 {
     public:
 
-    Click();
+    CursorEvent();
 
     int getId();
 
