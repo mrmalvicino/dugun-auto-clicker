@@ -14,17 +14,17 @@ class MouseAction
 
     CursorPosition getCursorPosition();
 
-    void setCursorPosition(CursorPosition cursorposition);
+    void setCursorPosition(CursorPosition cursorPosition);
 
     CursorEvent getCursorEvent();
 
-    void setCursorEvent(CursorEvent cursorevent);
+    void setCursorEvent(CursorEvent cursorEvent);
 
     private:
 
     int _time;
 
-    CursorPosition _cursorposition;
+    CursorPosition _cursorPosition;
 
-    CursorEvent _cursorevent;
+    CursorEvent _cursorEvent;
 };

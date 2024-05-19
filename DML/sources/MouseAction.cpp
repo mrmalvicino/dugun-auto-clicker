@@ -17,20 +17,20 @@ void MouseAction::setTime(int time)
 
 CursorPosition MouseAction::getCursorPosition()
 {
-    return _cursorposition;
+    return _cursorPosition;
 }
 
-void MouseAction::setCursorPosition(CursorPosition cursorposition)
+void MouseAction::setCursorPosition(CursorPosition cursorPosition)
 {
-    _cursorposition = cursorposition;
+    _cursorPosition = cursorPosition;
 }
 
 CursorEvent MouseAction::getCursorEvent()
 {
-    return _cursorevent;
+    return _cursorEvent;
 }
 
-void MouseAction::setCursorEvent(CursorEvent cursorevent)
+void MouseAction::setCursorEvent(CursorEvent cursorEvent)
 {
-    _cursorevent = cursorevent;
+    _cursorEvent = cursorEvent;
 }
