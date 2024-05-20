@@ -10,6 +10,12 @@ class Menu
 
     void display();
 
+    void run();
+
+    void sequence();
+
+    void file();
+
     void help();
 
     void hotkeys();

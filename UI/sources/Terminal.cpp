@@ -4,7 +4,7 @@ Terminal::Terminal()
 {
     _lineWidth = 40;
     _lineCharacter = '-';
-    setBackCaption("ATRÁS");
+    setBackCaption("Atrás");
 }
 
 void Terminal::setLineWidth(int lineWidth)
@@ -109,11 +109,6 @@ void Terminal::printCentered(std::string text)
     std::cout << "\n";
 }
 
-void Terminal::printBackOption()
-{
-    std::cout << "(0) " << getBackCaption() << "\n";
-}
-
 void Terminal::displayMenuHeader(std::string title)
 {
     printLine();
@@ -121,10 +116,19 @@ void Terminal::displayMenuHeader(std::string title)
     printLine();
 }
 
-void Terminal::displayMenuFooter()
+void Terminal::displayMenuFooter(std::string caption)
 {
     printLine();
-    printBackOption();
+
+    if (caption == "_backCaption")
+    {
+        std::cout << "(0) " << getBackCaption() << "\n";
+    }
+    else
+    {
+        std::cout << "(0) " << caption << "\n";
+    }
+
 }
 
 void Terminal::configureUTF8()

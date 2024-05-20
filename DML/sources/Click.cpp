@@ -1,10 +1,5 @@
 #include "../headers/Click.h"
 
-Click::Click()
-{
-
-}
-
 void Click::left()
 {
     #ifdef _WIN64

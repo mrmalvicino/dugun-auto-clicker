@@ -8,13 +8,107 @@ void Menu::display()
     {
         _terminal.clear();
         _terminal.displayMenuHeader("DUGUN AUTO CLICKER");
-        std::cout << "(1) INICIAR AUTO CLICKER\n";
-        std::cout << "(2) SECUENCIA...\n";
-        std::cout << "(3) AYUDA\n";
-        _terminal.printLine();
-        std::cout << "(0) SALIR\n";
+        std::cout << "(1) Iniciar\n";
+        std::cout << "(2) Secuencia\n";
+        std::cout << "(3) Capturadora\n";
+        std::cout << "(4) Ayuda\n";
+        _terminal.displayMenuFooter("Salir");
 
-        selection = _validation.cinIntBetween(0, 3);
+        selection = _validation.cinIntBetween(0, 4);
+
+        switch (selection)
+        {
+            case 1:
+                run();
+                break;
+            case 2:
+                sequence();
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                help();
+                break;
+        }
+    }
+    while (selection != 0);
+}
+
+void Menu::run()
+{
+
+}
+
+void Menu::sequence()
+{
+    int selection = 1;
+
+    do
+    {
+        _terminal.clear();
+        _terminal.displayMenuHeader("Secuencia");
+        std::cout << "    ID: 0\n";
+        std::cout << "(1) Nombre: Default\n";
+        std::cout << "(2) Archivo\n";
+        _terminal.printLine();
+        std::cout << "(3) Repeticiones: infinitas\n";
+        std::cout << "(4) Tiempo aleatorio: 0 ms\n";
+        std::cout << "(5) Posición aleatoria: 0 px\n";
+        _terminal.printLine();
+        std::cout << "(6) Agregar acción\n";
+        std::cout << "(7) Editar acciones creadas\n";
+        std::cout << "(8) Iniciar secuencia\n";
+        _terminal.displayMenuFooter();
+
+        selection = _validation.cinIntBetween(0, 9);
+
+        switch (selection)
+        {
+            case 1:
+                
+                break;
+            case 2:
+                file();
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+            case 5:
+                
+                break;
+            case 6:
+                
+                break;
+            case 7:
+                
+                break;
+            case 8:
+                
+                break;
+        }
+    }
+    while (selection != 0);
+}
+
+void Menu::file()
+{
+    int selection = 1;
+
+    do
+    {
+        _terminal.clear();
+        _terminal.displayMenuHeader("Archivo");
+        std::cout << "(1) Nuevo\n";
+        std::cout << "(2) Abrir\n";
+        std::cout << "(3) Guardar\n";
+        std::cout << "(4) Eliminar\n";
+        _terminal.displayMenuFooter();
+
+        selection = _validation.cinIntBetween(0, 4);
 
         switch (selection)
         {
@@ -25,7 +119,10 @@ void Menu::display()
                 
                 break;
             case 3:
-                help();
+                
+                break;
+            case 4:
+                
                 break;
         }
     }
@@ -39,10 +136,10 @@ void Menu::help()
     do
     {
         _terminal.clear();
-        _terminal.displayMenuHeader("AYUDA");
-        std::cout << "(1) ATAJOS DEL TECLADO\n";
-        std::cout << "(2) LENGUAJES\n";
-        std::cout << "(3) ACERCA DE\n";
+        _terminal.displayMenuHeader("Ayuda");
+        std::cout << "(1) Atajos del teclado\n";
+        std::cout << "(2) Lenguajes\n";
+        std::cout << "(3) Acerca de\n";
         _terminal.displayMenuFooter();
 
         selection = _validation.cinIntBetween(0, 3);
@@ -70,7 +167,7 @@ void Menu::hotkeys()
     do
     {
         _terminal.clear();
-        _terminal.displayMenuHeader("ATAJOS DEL TECLADO");
+        _terminal.displayMenuHeader("Atajos del teclado");
         std::cout << "Iniciar auto clicker: CTRL + A\n";
         std::cout << "Iniciar grabación de mouse: CTRL + R\n";
         std::cout << "Detener ejecución: CTRL + S\n";
@@ -89,9 +186,9 @@ void Menu::language()
     do
     {
         _terminal.clear();
-        _terminal.displayMenuHeader("LENGUAJES");
-        std::cout << "(1) INGLÉS\n";
-        std::cout << "(2) ESPAÑOL\n";
+        _terminal.displayMenuHeader("Lenguajes");
+        std::cout << "(1) Inglés\n";
+        std::cout << "(2) Español\n";
         _terminal.displayMenuFooter();
 
         selection = _validation.cinIntBetween(0, 2);

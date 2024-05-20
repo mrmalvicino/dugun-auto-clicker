@@ -14,23 +14,7 @@ class Click
 {
     public:
 
-    Click();
-
     void left();
 
     void right();
-
-    private:
-
-    #ifdef _WIN64
-
-    #endif
-
-    #ifdef __linux__
-        
-    #endif
-
-    #ifdef __APPLE__
-        
-    #endif
 };

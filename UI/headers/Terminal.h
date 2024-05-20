@@ -29,11 +29,9 @@ class Terminal
 
     void printCentered(std::string text);
 
-    void printBackOption();
-
     void displayMenuHeader(std::string title);
 
-    void displayMenuFooter();
+    void displayMenuFooter(std::string caption = "_backCaption");
 
     void configureUTF8();
 
