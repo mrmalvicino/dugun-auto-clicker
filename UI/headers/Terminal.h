@@ -3,12 +3,13 @@
 #include <stdio.h>
 #include <string.h>
 
-class Terminal {
+class Terminal
+{
     public:
 
     Terminal();
 
-    void setLineWidth(int lineLenght);
+    void setLineWidth(int lineWidth);
 
     int getLineWidth();
 

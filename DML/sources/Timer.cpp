@@ -2,8 +2,8 @@
 
 Timer::Timer()
 {
-    setInterval(1000);
-    setLoops(0);
+    _interval = 1000;
+    _loops = 0;
     _loopsDone = 0;
     _enabled = false;
     _millisecond = std::chrono::milliseconds(1);
@@ -34,8 +34,14 @@ void Timer::start()
     _enabled = true;
 }
 
+void Timer::pause()
+{
+    _enabled = false;
+}
+
 void Timer::stop()
 {
+    _loopsDone = 0;
     _enabled = false;
 }
 
@@ -49,7 +55,6 @@ bool Timer::enabled()
 
         if (_loopsDone == _loops + 1)
         {
-            _loopsDone = 0;
             stop();
         }
     }

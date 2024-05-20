@@ -2,14 +2,14 @@
 
 Terminal::Terminal()
 {
-    _lineWidth = 100;
+    _lineWidth = 40;
     _lineCharacter = '-';
     setBackCaption("ATRÁS");
 }
 
-void Terminal::setLineWidth(int lineLenght)
+void Terminal::setLineWidth(int lineWidth)
 {
-    _lineWidth = lineLenght;
+    _lineWidth = lineWidth;
 }
 
 int Terminal::getLineWidth()
@@ -27,9 +27,9 @@ int Terminal::getLineCharacter()
     return _lineCharacter;
 }
 
-void Terminal::setBackCaption(std::string back_caption)
+void Terminal::setBackCaption(std::string backCaption)
 {
-    strcpy(_backCaption, back_caption.c_str());
+    strcpy(_backCaption, backCaption.c_str());
 }
 
 std::string Terminal::getBackCaption()
@@ -86,7 +86,7 @@ void Terminal::pause()
 void Terminal::printLine()
 {
     for (int i = 0; i < _lineWidth; i ++) {
-        std::cout << "-";
+        std::cout << _lineCharacter;
     }
 
     std::cout << "\n";

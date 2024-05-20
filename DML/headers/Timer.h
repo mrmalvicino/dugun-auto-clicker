@@ -18,6 +18,8 @@ class Timer
 
     void start();
 
+    void pause();
+
     void stop();
 
     bool enabled();
