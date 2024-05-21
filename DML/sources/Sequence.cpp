@@ -69,7 +69,13 @@ MouseAction * Sequence::getMouseActions()
     return _mouseActions;
 }
 
-void Sequence::setMouseActions(MouseAction * mouseActions)
+void Sequence::setMouseActions(MouseAction * mouseActions, int size)
 {
     _mouseActions = mouseActions;
+    _actionsAmount = size;
+}
+
+int Sequence::getActionsAmount() const
+{
+    return _actionsAmount;
 }

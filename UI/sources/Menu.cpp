@@ -57,7 +57,7 @@ void Menu::sequence()
         std::cout << "(5) Posición aleatoria: 0 px\n";
         _terminal.printLine();
         std::cout << "(6) Agregar acción\n";
-        std::cout << "(7) Editar acciones creadas\n";
+        std::cout << "(7) Editar acciones existentes\n";
         std::cout << "(8) Iniciar secuencia\n";
         _terminal.displayMenuFooter();
 

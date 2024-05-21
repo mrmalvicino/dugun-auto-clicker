@@ -31,7 +31,9 @@ class Sequence
 
     MouseAction * getMouseActions();
 
-    void setMouseActions(MouseAction * mouseActions);
+    void setMouseActions(MouseAction * mouseActions, int size);
+
+    int getActionsAmount() const;
 
     private:
 
@@ -46,4 +48,6 @@ class Sequence
     int _randomPosition;
 
     MouseAction * _mouseActions;
+
+    int _actionsAmount;
 };

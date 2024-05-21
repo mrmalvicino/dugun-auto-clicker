@@ -22,7 +22,9 @@ class Timer
 
     void stop();
 
-    bool enabled();
+    void tick();
+
+    bool enabled(bool isDoWhileCondition = 0);
 
     private:
 

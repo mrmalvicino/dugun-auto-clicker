@@ -15,6 +15,8 @@ class CursorEvent
 
     void setName(std::string name);
 
+    std::string toString();
+
     private:
 
     int _id;

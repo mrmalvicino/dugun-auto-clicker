@@ -34,3 +34,8 @@ void MouseAction::setCursorEvent(CursorEvent cursorEvent)
 {
     _cursorEvent = cursorEvent;
 }
+
+std::string MouseAction::toString()
+{
+    return _cursorEvent.toString() + " at " + _cursorPosition.toString();
+}

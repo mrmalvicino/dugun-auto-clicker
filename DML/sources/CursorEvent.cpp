@@ -2,8 +2,8 @@
 
 CursorEvent::CursorEvent()
 {
-    setId(0);
-    setName("");
+    _id = 1;
+    setName("Wait");
 }
 
 int CursorEvent::getId()
@@ -24,4 +24,9 @@ std::string CursorEvent::getName()
 void CursorEvent::setName(std::string name)
 {
     strcpy(_name, name.c_str());
+}
+
+std::string CursorEvent::toString()
+{
+    return _name;
 }

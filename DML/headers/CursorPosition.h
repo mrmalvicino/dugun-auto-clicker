@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 class CursorPosition
 {
@@ -13,6 +14,8 @@ class CursorPosition
     int getY();
 
     void setY(int y);
+
+    std::string toString();
 
     private:
 

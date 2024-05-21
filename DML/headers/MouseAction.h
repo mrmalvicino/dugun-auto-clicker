@@ -20,6 +20,8 @@ class MouseAction
 
     void setCursorEvent(CursorEvent cursorEvent);
 
+    std::string toString();
+
     private:
 
     int _time;

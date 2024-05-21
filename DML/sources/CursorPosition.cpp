@@ -25,3 +25,8 @@ void CursorPosition::setY(int y)
 {
     _y = y;
 }
+
+std::string CursorPosition::toString()
+{
+    return "(" + std::to_string(_x) + "," + std::to_string(_y) + ")";
+}

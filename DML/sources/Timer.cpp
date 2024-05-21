@@ -45,19 +45,25 @@ void Timer::stop()
     _enabled = false;
 }
 
-bool Timer::enabled()
+void Timer::tick()
 {
     std::this_thread::sleep_for(_interval * _millisecond);
+}
 
+bool Timer::enabled(bool isDoWhileCondition)
+{
     if (0 < _loops)
     {
         _loopsDone ++;
 
-        if (_loopsDone == _loops + 1)
+        if (_loopsDone == _loops + 1 - isDoWhileCondition)
         {
             stop();
+            return _enabled;
         }
     }
+
+    tick();
 
     return _enabled;
 }
