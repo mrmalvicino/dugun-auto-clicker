@@ -15,6 +15,8 @@ class CursorPosition
 
     void setY(int y);
 
+    void setXY(int x, int y);
+
     std::string toString();
 
     private:

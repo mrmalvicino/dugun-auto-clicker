@@ -3,14 +3,17 @@
 #include "DML/headers/Sequence.h"
 #include "DML/headers/MouseAction.h"
 #include "DML/headers/Timer.h"
+#include "API/headers/MacOSController.h"
 
 int main()
 {
     int actionsAmount = 3;
     MouseAction * mouseActions = new MouseAction[actionsAmount];
 
-    Sequence sequence;
-    sequence.setMouseActions(mouseActions, actionsAmount);
+    //Sequence sequence;
+    //sequence.setMouseActions(mouseActions, actionsAmount);
+
+    MacOSController controller;
 
     MouseAction action1;
     CursorPosition position1;
@@ -18,7 +21,7 @@ int main()
     position1.setY(151);
     action1.setCursorPosition(position1);
     CursorEvent event1;
-    event1.setName("Left click");
+    event1.setName("Right click");
     action1.setCursorEvent(event1);
     action1.setTime(2000);
 
@@ -48,14 +51,31 @@ int main()
 
     Timer timer;
     timer.setLoops(actionsAmount);
+    timer.setInterval(mouseActions[0].getTime());
     timer.start();
 
     int i = 0;
 
     while (timer.enabled())
     {
-        timer.setInterval(mouseActions[i].getTime());
         std::cout << mouseActions[i].toString() << "\n";
+
+        controller.move(mouseActions[i].getCursorPosition());
+
+        if (mouseActions[i].getCursorEvent().getName() == "Left click")
+        {
+            controller.leftClick();
+        }
+        else if (mouseActions[i].getCursorEvent().getName() == "Right click")
+        {
+            controller.rightClick();
+        }
+
+        if (i + 1 < timer.getLoops())
+        {
+            timer.setInterval(mouseActions[i+1].getTime());
+        }
+
         i++;
     }
 
