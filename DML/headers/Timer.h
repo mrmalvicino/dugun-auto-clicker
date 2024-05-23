@@ -12,9 +12,9 @@ class Timer
 
     void setInterval(int interval);
 
-    int getLoops();
+    int getLoopsAmount();
 
-    void setLoops(int loops);
+    void setLoopsAmount(int loopsAmount);
 
     void start();
 
@@ -30,7 +30,7 @@ class Timer
 
     int _interval;
 
-    int _loops;
+    int _loopsAmount;
 
     int _loopsDone;
 

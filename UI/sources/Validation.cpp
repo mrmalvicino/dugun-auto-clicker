@@ -32,3 +32,34 @@ int Validation::cinIntBetween(int min, int max)
 
     return rtn;
 }
+
+bool Validation::cinBool()
+{
+    char input;
+    bool rtn;
+
+    while (true)
+    {
+        if (std::cin >> input && (input == 'y' || input == 'Y' || input == 's' || input == 'S' || input == 'n' || input == 'N'))
+        {
+            break;
+        }
+        else
+        {
+            std::cin.clear();
+            _terminal.cleanBuffer();
+            std::cout << "Error de validación: Ingresar 'S' para confirmar o 'N' para denegar.\n";
+        }
+    }
+
+    if (input == 'y' || input == 'Y' || input == 's' || input == 'S')
+    {
+        rtn = true;
+    }
+    else
+    {
+        rtn = false;
+    }
+
+    return rtn;
+}

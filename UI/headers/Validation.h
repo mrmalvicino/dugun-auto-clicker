@@ -8,6 +8,8 @@ class Validation
 
     int cinIntBetween(int min, int max);
 
+    bool cinBool();
+
     private:
 
     Terminal _terminal;

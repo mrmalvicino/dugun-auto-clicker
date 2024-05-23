@@ -8,12 +8,12 @@ Sequence::Sequence()
     setRandomTime(0);
     setRandomPosition(0);
 }
-
+/*
 Sequence::~Sequence()
 {
     delete [] _mouseActions;
 }
-
+*/
 int Sequence::getId()
 {
     return _id;
@@ -22,6 +22,16 @@ int Sequence::getId()
 void Sequence::setId(int id)
 {
     _id = id;
+}
+
+bool Sequence::getStatus()
+{
+    return _status;
+}
+
+void Sequence::setStatus(bool status)
+{
+    _status = status;
 }
 
 std::string Sequence::getName()
@@ -69,10 +79,10 @@ MouseAction * Sequence::getMouseActions()
     return _mouseActions;
 }
 
-void Sequence::setMouseActions(MouseAction * mouseActions, int size)
+void Sequence::setMouseActions(MouseAction * mouseActions, int actionsAmount)
 {
     _mouseActions = mouseActions;
-    _actionsAmount = size;
+    _actionsAmount = actionsAmount;
 }
 
 int Sequence::getActionsAmount() const

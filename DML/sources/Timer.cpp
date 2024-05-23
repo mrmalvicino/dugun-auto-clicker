@@ -3,7 +3,7 @@
 Timer::Timer()
 {
     _interval = 1000;
-    _loops = 0;
+    _loopsAmount = 0;
     _loopsDone = 0;
     _enabled = false;
     _millisecond = std::chrono::milliseconds(1);
@@ -19,14 +19,14 @@ void Timer::setInterval(int interval)
     _interval = interval;
 }
 
-int Timer::getLoops()
+int Timer::getLoopsAmount()
 {
-    return _loops;
+    return _loopsAmount;
 }
 
-void Timer::setLoops(int loops)
+void Timer::setLoopsAmount(int loopsAmount)
 {
-    _loops = loops;
+    _loopsAmount = loopsAmount;
 }
 
 void Timer::start()
@@ -52,11 +52,11 @@ void Timer::tick()
 
 bool Timer::enabled(bool isDoWhileCondition)
 {
-    if (0 < _loops)
+    if (0 < _loopsAmount)
     {
         _loopsDone ++;
 
-        if (_loopsDone == _loops + 1 - isDoWhileCondition)
+        if (_loopsDone == _loopsAmount + 1 - isDoWhileCondition)
         {
             stop();
             return _enabled;

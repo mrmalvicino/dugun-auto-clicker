@@ -6,12 +6,16 @@ class Sequence
     public:
 
     Sequence();
-
+/*
     ~Sequence();
-
+*/
     int getId();
 
     void setId(int id);
+
+    bool getStatus();
+
+    void setStatus(bool status);
 
     std::string getName();
 
@@ -31,13 +35,15 @@ class Sequence
 
     MouseAction * getMouseActions();
 
-    void setMouseActions(MouseAction * mouseActions, int size);
+    void setMouseActions(MouseAction * mouseActions, int actionsAmount);
 
     int getActionsAmount() const;
 
     private:
 
     int _id;
+
+    bool _status;
 
     char _name[30];
 
